@@ -18,6 +18,11 @@ use frontend\models\ContactForm;
  */
 class SiteController extends Controller
 {
+    public function actionSay($message = 'Привет')
+    {
+        return $this->render('say', ['message' => $message]);
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -73,6 +78,7 @@ class SiteController extends Controller
     public function actionIndex()
     {
         return $this->render('index');
+        //return $this->render('say', ['message' => $message]);
     }
 
     /**
